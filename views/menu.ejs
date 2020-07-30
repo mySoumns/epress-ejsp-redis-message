@@ -1,0 +1,31 @@
+
+<header id='menu'>
+    <div class='container'>
+        <div class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+            <a class="navbar-brand mr-0 mr-md-2 text-secondary" href="/" aria-label="Bootstrap">
+                留言板
+            </a>
+            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                <% if(locals.user){ %>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/message">去留言</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout">退出</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#"><%=user.name%></a>
+                  </li>
+                <% } else { %>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/login">登录</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register">注册</a>
+                </li>
+                <% } %>
+
+            </ul>
+        </div>
+    </div>
+</header>

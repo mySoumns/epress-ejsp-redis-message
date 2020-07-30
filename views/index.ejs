@@ -1,0 +1,13 @@
+<% include ./header.ejs %>
+<div class='container mt-2'>
+  <ul class="list-group">
+    <% entries.forEach((entry)=>{ %>
+      <li class="list-group-item">
+        <h5><%= entry.title %></h5>
+        <p><%= entry.body %></p>
+        <p class='text-info'>留言者：<%= entry.username %></p>
+      </li>
+      <% }) %>
+  </ul>
+</div>
+<% include ./footer.ejs %>  

@@ -1,0 +1,16 @@
+<% include ./header.ejs %>
+
+<div class='container mt-2'>
+    <form action="/message" method="post">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">留言标题</label>
+          <input type="text" class="form-control"  name='entry[title]' id="exampleFormControlInput1" placeholder="输入留言标题">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">留言内容</label>
+          <textarea class="form-control" name="entry[body]" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">提交</button>
+      </form>
+</div>
+<% include ./footer.ejs %>
